@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> E-Rario </title>
+  <link rel="icon" href="img/logo.ico" type="image/x-icon">
+ </head>
+<script>var Fecha =[]
+<% for(var i = 0; i < Fechas.length; i++){
+    %>Fecha[<%=i%>] = " <%=Fechas[i]%> "
+<%}%>
+var Asunto =[]
+<% for(var i = 0; i < Asuntos.length; i++){
+    %>Asunto[<%=i%>] = " <%=Asuntos[i]%> "
+<%}%></script>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+
+      		<a id="logo-header"href="/">
+			<span class="site-name">E-RARIO</span>
+		</a> <!-- / #logo-header -->
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
+         <ul id="dropdown1" class="dropdown-content">
+              <li><a class="desplegable" href="https://uyaull-e0414.firebaseapp.com/" onclick="return false">Chat</a></li>
+              <li class="divider"></li>
+              <li><a class="desplegable" href="/Contacto">Otras formas</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+                <li><a href="/">Portada</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Contacto<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="cerrar" href="/LogOut">Log Out</a></li>
+    </ul>
+
+      </ul>
+
+      <ul class="side-nav" id="mobile-demo">
+        <ul id="dropdown2" class="dropdown-content">
+              <li><a class="desplegable" href="https://uyaull-e0414.firebaseapp.com/">Chat</a></li>
+              <li class="divider"></li>
+              <li><a class="desplegable" href="/Contacto">Otras formas</a></li>
+        </ul>
+
+            <li><a href="/">Portada</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Contacto<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="cerrar" href="/LogIn-Up">Acceder</a></li>
+      <!-- Dropdown Trigger -->
+    </ul>
+
+    </div>
+      </nav>
+    </header>
+
+
+    <div class="container">
+      <div class="mainh row">
+        <div class="col s12">
+          <div class="row">
+            <div class="col s2 offset-s10">
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Crear</a>
+            </div>
+          </div>
+        <div id="Lunes" class="row">
+          <div  class="col l1 day center-align">
+            <div class= "DiaSemana">
+              Lunes
+            </div>
+            <div class= "DiaMes">
+            </div>
+          </div>
+
+          <div class="Evento col s10">
+
+          </div>
+
+        </div>
+        <div id = "Martes" class="row">
+          <div class="col l1 day center-align">
+            <div class= "DiaSemana">
+              Martes
+            </div>
+            <div class= "DiaMes">
+
+            </div>
+          </div>
+          <div class="Evento col s10">
+
+          </div>
+
+
+        </div>
+        <div id = "Miercoles" class="row">
+          <div class="col l1 day center-align">
+            <div class= "DiaSemana">
+              Miercoles
+            </div>
+            <div class= "DiaMes">
+
+            </div>
+          </div>
+          <div class="Evento col s10">
+
+          </div>
+        </div>
+
+        <div id = "Jueves" class="row">
+          <div class="col l1 day center-align">
+            <div class= "DiaSemana">
+            Jueves
+            </div>
+            <div class= "DiaMes">
+
+            </div>
+          </div>
+          <div class="Evento col s10">
+
+          </div>
+
+        </div>
+        <div id = "Viernes" class="row">
+          <div class="col l1 day center-align">
+            <div class= "DiaSemana">
+              Viernes
+            </div>
+            <div class= "DiaMes">
+
+            </div>
+          </div>
+          <div class="Evento col s10">
+
+          </div>
+
+        </div>
+        <div id = "Sabado" class="row">
+          <div class="col l1 day center-align">
+            <div class= "DiaSemana">
+              Sabado
+            </div>
+            <div class= "DiaMes">
+
+            </div>
+          </div>
+          <div class="Evento col s10">
+
+          </div>
+
+        </div>
+
+        <div id = "Domingo" class="row">
+          <div class="col l1 day center-align">
+            <div class= "DiaSemana">
+              Domingo
+            </div>
+            <div class= "DiaMes">
+
+            </div>
+          </div>
+          <div class="Evento col s10">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+    <div id="modal1" class="modal">
+
+      <div class="form-box">
+        <div class="row">
+          <h1 class="modalFormtitle">Crear Evento</h1>
+        </div>
+        <form class="form" action="/createEvent" method="post">
+
+          <div class="row">
+            <div class="input-field col s6">
+
+                <input id="reg_asunto" class="form-font" name="form_asunto" type="text" class="validate">
+                <label for="reg_asunto">Asunto: </label>
+            </div>
+            <div class="input-field col s6">
+                <input id="reg_day" class="form-font" name="form_day" type="datetime-local" class="validate">
+                <label for="reg_day"> </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12">
+              <span id="reg_error" class="output"> </span>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col s8 offset-s4">
+              <button id="btn_reg_event" class="modal-close form-button rigth" type="submit">Crear</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+
+
+
+
+    <footer class="page-footer">
+      <h1 align="center">E-RARIO</h1>
+      <div class="container">
+        <div class="row">
+            <h5><a class="white-text" href="/Contacto">Contáctanos:</a></h5>
+            <ul class="social" align="center">
+             <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/e-rario/" class="insta" title="Instagram" data-aos="fade-up" data-aos-delay="20"><i class="fa fa-instagram"></i></a></li>
+             <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/e-rario/" class="face" title="Facebook" data-aos="fade-up" data-aos-delay="40"><i class="fa fa-facebook"></i></a></li>
+             <li><a class="grey-text text-lighten-3" href="https://twitter.com/e-rario" class="twit" title="Twitter" data-aos="fade-up" data-aos-delay="60"><i class="fa fa-twitter"></i></a></li>
+             <li><a class="grey-text text-lighten-3" href="#" class="google" title="Google +" data-aos="fade-up" data-aos-delay="80"><i class="fa fa-google-plus"></i></a></li>
+             <li><a class="grey-text text-lighten-3" href="#" class="linkedin" title="Linkedin" data-aos="fade-up" data-aos-delay="100"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2018 Copyright Text
+        </div>
+      </div>
+    </footer>
+  <script src ="js/index.js"></script>
+    <script src ="js/content.js"></script>
+  </body>
+
+</html>
